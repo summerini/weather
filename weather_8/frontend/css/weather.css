@@ -1,0 +1,141 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 225, 205, 0.3);
+
+    font-family: 'Jua', sans-serif;
+}
+
+header,
+main {
+    min-width: 550px;
+    max-width: 800px;
+    padding: 12px 72px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+header {
+    position: relative;
+    height: fit-content;
+
+    margin-top: 100px;
+}
+
+#search {
+    margin: 10px;
+    padding: center;
+    width: 50%;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 1px rgba(100, 100, 100, 0.3);
+    display: inline-block;
+    text-align-last: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#time-standard {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    left: 5px;
+    bottom: -10px;
+}
+
+#weather {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    box-sizing: border-box;
+    background-color: transparent;
+
+    box-shadow: 0px 1px 5px 1px rgba(100, 100, 100, 0.3);
+}
+
+#main {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding-top: 100px;
+
+    text-align: center;
+    line-height: 300px;
+}
+
+#main>span {
+    font-size: 300%;
+}
+
+#main.back {
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: center;
+    background-color: rgba(135, 207, 235, 0.5);
+}
+
+#main>.loading {
+    display: block;
+    width: 200px;
+    height: 100%;
+
+    margin: 0px auto;
+
+    position: relative;
+    top: -50px;
+
+    animation: rotate_image 5s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#detail {
+    display: grid;
+    grid-template-rows: repeat(1, 100px);
+    grid-template-columns: repeat(3, 1fr);
+
+    box-shadow: 0px 1px 5px 1px rgba(100, 100, 100, 0.3);
+}
+
+#detail>div {
+    box-sizing: border-box;
+
+    padding-left: 150px;
+    line-height: 120px;
+
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-x: 80px;
+    background-position-y: 30px;
+}
+
+#temperature.back {
+    background-image: url("../resources/temperate.png");
+}
+
+#wet.back {
+    background-image: url("../resources/wet.png");
+}
+
+#wind.back {
+    background-image: url("../resources/wind.png");
+}
